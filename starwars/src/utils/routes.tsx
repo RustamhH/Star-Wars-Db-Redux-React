@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
-import Films from "../components/Films.tsx";
-import People from "../components/People.tsx";
-import Planets from "../components/Planets.tsx";
-import Species from "../components/Species.tsx";
-import Starships from "../components/Starships.tsx";
-import Vehicles from "../components/Vehicles.tsx";
+import Films from "../components/Films.jsx";
+import People from "../components/People.jsx";
+import Planets from "../components/Planets.jsx";
+import Species from "../components/Species.jsx";
+import Starships from "../components/Starships.jsx";
+import Vehicles from "../components/Vehicles.jsx";
 import ErrorElement from "../components/ErrorElement.tsx";
 import Film from "../components/Film.tsx";
 import Person from "../components/Person.tsx";
