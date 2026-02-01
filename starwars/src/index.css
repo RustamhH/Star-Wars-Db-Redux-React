@@ -3,31 +3,134 @@
 :root {
   display: flex;
   padding-left: 120px;
-  background-image: url(https://wallpapercave.com/wp/wp3614456.jpg);
-  background-position: top;
+  background-image:     url('https://unsplash.com/photos/lBCpc87rtKo/download?w=1920');;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'Raleway';
   color: white;
+  min-height: 100vh;
 }
 
+/* ─── Mobile first ─── */
+@media (max-width: 600px) {
+  :root {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
+  .header {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+
+  .backbutton {
+    margin-top: 24px;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .list-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .details {
+    margin-top: 40px;
+    padding: 0 8px;
+  }
+
+  .details-txt {
+    font-size: 15px;
+  }
+}
+
+/* ─── Tablet ─── */
+@media (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    padding-left: 48px;
+    padding-right: 48px;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .header {
+    font-size: 38px;
+  }
+
+  .backbutton {
+    margin-top: 36px;
+  }
+
+  .details {
+    margin-top: 60px;
+  }
+
+  .details-txt {
+    font-size: 17px;
+  }
+}
+
+/* ─── Desktop (original styles kept intact) ─── */
+@media (min-width: 1025px) {
+  :root {
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .header {
+    color: #ffef62;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .backbutton {
+    margin-top: 50px;
+    background-color: #ffef62;
+    font-weight: 700;
+  }
+
+  .list-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .details-txt {
+    font-size: 18px;
+  }
+}
+
+/* ─── Shared styles (always apply) ─── */
 .header {
   color: #ffef62;
   font-weight: bold;
-  font-size: 50px;
   text-align: center;
 }
 
 .backbutton {
-  margin-top: 50px;
   background-color: #ffef62;
   font-weight: 700;
 }
 
 .list-item {
   display: flex;
-  gap: 20px;
   align-items: center;
 }
 
@@ -35,106 +138,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
 }
 
-.details-txt {
-  font-size: 18px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ─── General styles ─── */
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #cccccc;
 }
-
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
 button {
@@ -144,7 +168,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -168,3 +192,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
