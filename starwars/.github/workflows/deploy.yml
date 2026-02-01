@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - name: Run tests
+          run: |
+            npm install
+            npm test
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with: 
+            node-version: 21
+        - run: npm install
+        
+        - name: Deploy
+          run: npx vercel --token=${{ secrets.VERCEL_TOKEN }}
+          env:
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_USER_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
