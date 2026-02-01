@@ -3,7 +3,7 @@
 :root {
   display: flex;
   padding-left: 120px;
-  background-image:     url('https://unsplash.com/photos/lBCpc87rtKo/download?w=1920');;
+  background-image: url('https://wallpaper.dog/large/20390209.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,9 +18,9 @@
   :root {
     padding-left: 16px;
     padding-right: 16px;
-    background-position: center top;
+    background-position: 60% top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 
   .header {
@@ -39,11 +39,20 @@
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    padding: 16px 12px;
+  }
+
+  /* Stack a tags vertically on mobile */
+  a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
   }
 
   .details {
     margin-top: 40px;
-    padding: 0 8px;
+    padding: 24px 16px;
+    max-width: 100%;
   }
 
   .details-txt {
@@ -69,8 +78,16 @@
     margin-top: 36px;
   }
 
+  /* Stack a tags vertically on tablet too */
+  a {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+  }
+
   .details {
     margin-top: 60px;
+    padding: 28px 32px;
   }
 
   .details-txt {
@@ -132,12 +149,28 @@
 .list-item {
   display: flex;
   align-items: center;
+  background-color: rgba(10, 12, 20, 0.7);
+  border-radius: 16px;
+  padding: 20px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  margin-bottom: 12px;
 }
 
 .details {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(10, 12, 20, 0.7);
+  border-radius: 16px;
+  padding: 32px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ─── General styles ─── */
@@ -192,5 +225,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-
